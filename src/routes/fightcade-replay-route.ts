@@ -6,6 +6,7 @@ export const replayRouter = Router();
 replayRouter.get("/", async (req: Request, res: Response) => {
   try {
     const replays = await Fightcade.GetReplays();
+    console.log(replays);
     res.json(replays);
   } catch (error) {
     console.error(error);
